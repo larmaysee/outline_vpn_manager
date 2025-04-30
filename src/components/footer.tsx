@@ -1,18 +1,18 @@
 "use client";
 
 import { Link } from "@heroui/link";
-import { Button, Tooltip, useDisclosure } from "@heroui/react";
+import { Tooltip, useDisclosure } from "@heroui/react";
 
-import { app } from "@/src/core/config";
-import { AmRoLogo, GithubIcon, HeartIcon, HeartIconDuotone, RedditIcon } from "@/src/components/icons";
-import { ThemeSwitch } from "@/src/components/theme-switch";
+import { GithubIcon, HeartIconDuotone, RedditIcon } from "@/src/components/icons";
 import DonationModal from "@/src/components/modals/donation-modal";
+import { ThemeSwitch } from "@/src/components/theme-switch";
+import { app } from "@/src/core/config";
 
 export const Footer = () => {
     const donationModalDisclosure = useDisclosure();
 
     return (
-        <footer className="w-full grid place-items-center gap-8 py-3 mt-8">
+        <footer className="w-full grid place-items-center gap-8 py-5">
             <DonationModal disclosure={donationModalDisclosure} />
 
             <div className="flex gap-6 items-center justify-center">
@@ -36,21 +36,6 @@ export const Footer = () => {
 
                 <ThemeSwitch />
             </div>
-
-            <Button
-                isExternal
-                as={Link}
-                className="flex items-center gap-1 text-current"
-                href={app.links.me}
-                size="sm"
-                variant="light"
-            >
-                <span className="text-default-600">Made with</span>
-                <HeartIcon className="fill-red-500" size={20} />
-                <span className="text-default-600">by</span>
-                <AmRoLogo className="fill-primary" size={24} />
-                <span className="text-default-600">for FREE internet</span>
-            </Button>
         </footer>
     );
 };

@@ -29,7 +29,7 @@ export const app = {
     },
 
     links: {
-        github: "https://github.com/AmRo045/OutlineAdmin",
+        github: "https://github.com/larmaysee/outline_vpn_manager",
         x: "https://x.com/AmRo045",
         me: "https://amro045.github.io",
         outlineVpnWiki: {
@@ -40,14 +40,9 @@ export const app = {
 
     snippets: {
         newOutlineServer: `sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"`,
-        existingServer: `sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/AmRo045/outline-admin/main/access.sh)"`,
+        existingServer: `sudo bash -c "$(wget -qO- https://github.com/larmaysee/outline_vpn_manager/blob/main/access.sh)"`,
         exampleServerManagementJson: `{"apiUrl":"https://xxx.xxx.xxx.xxx:xxxxx/xxxxxxxxxxxxxxxxxxxxxx","certSha256":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}`
     },
 
-    donation: {
-        BTC: "bc1qjmnnw4779ntv08uuqmpqnx7hqmygl08z4z500a",
-        USDT: "0xCcF2117F837b16fbc0FbDe0178De0a2aCbfadC58",
-        ETH: "0xCcF2117F837b16fbc0FbDe0178De0a2aCbfadC58",
-        TON: "UQByW0gL9r89D4oFagC3ZRCEctIoh6XjHu7zv5xU2wcPVATT"
-    }
+    donation: {}
 };

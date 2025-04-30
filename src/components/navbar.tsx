@@ -11,13 +11,13 @@ import {
     NavbarMenuToggle
 } from "@heroui/react";
 import NextLink from "next/link";
-import { useForm } from "react-hook-form";
 import { usePathname } from "next/navigation";
+import { useForm } from "react-hook-form";
 
 import { DynamicAccessKeyIcon, Logo, LogoutIcon, ServersIcon } from "@/src/components/icons";
 import { logout } from "@/src/core/actions";
-import { UserSession } from "@/src/core/definitions";
 import { app } from "@/src/core/config";
+import { UserSession } from "@/src/core/definitions";
 
 const navItems = [
     {
@@ -80,13 +80,14 @@ export const Navbar = ({ session }: Props) => {
                     <form onSubmit={logoutForm.handleSubmit(handleLogout)}>
                         <Button
                             color="danger"
-                            isIconOnly={true}
+                            isIconOnly={false}
                             isLoading={logoutForm.formState.isSubmitting}
                             size="sm"
                             type="submit"
-                            variant="light"
+                            variant="shadow"
                         >
                             <LogoutIcon size={22} />
+                            <span className="hidden md:inline">LOGOUT</span>
                         </Button>
                     </form>
                 </NavbarItem>

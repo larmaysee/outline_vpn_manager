@@ -1,6 +1,5 @@
 "use client";
 
-import { UseDisclosureReturn } from "@heroui/use-disclosure";
 import {
     Accordion,
     AccordionItem,
@@ -12,7 +11,8 @@ import {
     ModalHeader,
     Snippet
 } from "@heroui/react";
-import React, { useEffect, useRef } from "react";
+import { UseDisclosureReturn } from "@heroui/use-disclosure";
+import { useEffect, useRef } from "react";
 
 import { CopyIcon } from "@/src/components/icons";
 import { app } from "@/src/core/config";
@@ -33,13 +33,17 @@ export default function DonationModal({ disclosure }: Props) {
                         donation.
                     </div>
 
-                    <Accordion variant="light">
-                        {Object.entries(app.donation).map(([name, address]) => (
-                            <AccordionItem key={name} aria-label={name} title={name}>
-                                <CryptoItem address={address} name={name} />
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                    {app.donation && Object.keys(app.donation).length > 0 ? (
+                        <Accordion variant="light">
+                            {Object.entries(app.donation).map(([name, address]) => (
+                                <AccordionItem key={name} aria-label={name} title={name}>
+                                    <CryptoItem address={address as string} name={name} />
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    ) : (
+                        <div>No donation options available at the moment.</div>
+                    )}
                 </ModalBody>
                 <ModalFooter className="flex justify-end">
                     <Button variant="flat" onPress={disclosure.onClose}>
