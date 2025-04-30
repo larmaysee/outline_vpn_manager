@@ -7,19 +7,13 @@
 Outline Admin is a web interface for the Outline Manager API, providing a simple and user-friendly UI for managing VPN
 servers.
 
-> [!NOTE] The previous PHP/Laravel version of this project has been moved to the
-> [OutlineAdminLaravel](https://github.com/AmRo045/OutlineAdminLaravel) repository.
-
 ## Table of Contents
 
 1. [Added Features](#added-features)
 2. [Installation](#installation)
-    - [Using Docker](#installation---docker)
-    - [Using Docker Compose](#using-docker-compose)
     - [Using NodeJS](#installation---nodejs)
 3. [Development](#development)
-4. [Donation](#donation)
-5. [Screenshots](#screenshots)
+4. [Screenshots](#screenshots)
 
 ## Added Features
 
@@ -30,27 +24,6 @@ servers.
 
 ## Installation
 
-### Installation - Docker
-
-Before installing Outline Admin, ensure that Docker and Docker Compose are installed on your machine. Use the following
-commands to start the container:
-
-```bash
-docker run -d -p 3000:3000 --name outline-admin -v ./oa_data:/app/data --restart unless-stopped amro045/outline-admin:latest
-```
-
-#### Using Docker Compose
-
-To simplify the installation, you can use a Docker Compose file:
-
-```bash
-wget -O docker-compose.yml https://raw.githubusercontent.com/AmRo045/OutlineAdmin/main/docker-compose.yml
-```
-
-```bash
-docker compose up -d
-```
-
 ### Installation - NodeJS
 
 To run this project on your machine, ensure you have Node.js v20 or later and npm v10 or later installed. Follow the
@@ -59,8 +32,8 @@ steps below to set up Outline Admin using Node.js:
 #### Step 1: Prepare the project files
 
 ```bash
-git clone https://github.com/AmRo045/OutlineAdmin.git
-cd OutlineAdmin
+git clone https://github.com/larmaysee/outline_vpn_manager.git
+cd outline_vpn_manager
 cp .env.example .env
 ```
 
@@ -99,8 +72,8 @@ Follow the steps below:
 #### Step 1: Prepare the project files
 
 ```bash
-git clone https://github.com/AmRo045/OutlineAdmin.git
-cd OutlineAdmin
+git clone https://github.com/larmaysee/outline_vpn_manager.git
+cd outline_vpn_manager
 cp .env.example .env
 ```
 
